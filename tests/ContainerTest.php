@@ -8,8 +8,12 @@
  * This source file is subject to the MIT license that is bundled.
  */
 
-namespace Guanguans\Di;
+namespace Guanguans\Di\Tests;
 
-class Di
+class ContainerTest extends TestCase
 {
+    public function testTrueIstrue()
+    {
+        $this->assertTrue(true);
+    }
 }

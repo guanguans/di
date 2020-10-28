@@ -8,12 +8,10 @@
  * This source file is subject to the MIT license that is bundled.
  */
 
-namespace Guanguans\Di\Tests;
+namespace Guanguans\Di;
 
-class DiTest extends TestCase
+use Exception;
+
+class BindingResolutionException extends Exception
 {
-    public function testTrueIstrue()
-    {
-        $this->assertTrue(true);
-    }
 }
