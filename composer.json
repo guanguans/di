@@ -35,7 +35,7 @@
         "vimeo/psalm": "^3.11",
         "mockery/mockery": "^1.2",
         "brainmaestro/composer-git-hooks": "^2.7",
-        "phpunit/phpunit": "~7"
+        "phpunit/phpunit": "^7"
     },
     "autoload": {
         "psr-4": {

@@ -2,7 +2,7 @@
 
 > A flexible dependency injection container based on the modification of `illuminate/container`. - 一个灵活的基于 `illuminate/container` 修改的依赖注入容器。
 
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/guanguans/di/run-tests?label=tests)](https://github.com/guanguans/di/actions?query=workflow%3Arun-tests+branch%3Amaster)
+![Tests](https://github.com/guanguans/di/workflows/Tests/badge.svg)
 
 ## Requirement
 
