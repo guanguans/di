@@ -3,6 +3,10 @@
 > A flexible dependency injection container based on the modification of `illuminate/container`. - 一个灵活的基于 `illuminate/container` 修改的依赖注入容器。
 
 ![Tests](https://github.com/guanguans/di/workflows/Tests/badge.svg)
+![Check & fix styling](https://github.com/guanguans/di/workflows/Check%20&%20fix%20styling/badge.svg)
+[![Latest Stable Version](https://poser.pugx.org/guanguans/di/v)](//packagist.org/packages/guanguans/di)
+[![Total Downloads](https://poser.pugx.org/guanguans/di/downloads)](//packagist.org/packages/guanguans/di)
+[![License](https://poser.pugx.org/guanguans/di/license)](//packagist.org/packages/guanguans/di)
 
 ## Requirement
 
@@ -18,7 +22,39 @@ $ composer require guanguans/di -vvv
 
 ``` php
 <?php
-$skeleton = new Guanguans\Di\Di();
+
+require __DIR__.'/vendor/autoload.php';
+
+class ClassA
+{
+    public $classB;
+
+    public function __construct(ClassB $classB)
+    {
+        $this->classB = $classB;
+    }
+}
+
+class ClassB
+{
+    public $classc;
+
+    public function __construct(ClassC $classc)
+    {
+        $this->classc = $classc;
+    }
+}
+
+class ClassC
+{
+}
+
+$container = new \Guanguans\Di\Container();
+$classA = $container->make(ClassA::class);
+var_dump($container->get(ClassA::class));
+var_dump($classA);
+var_dump($classA->classB);
+var_dump($classA->classB->classc);
 ```
 
 ## Testing
