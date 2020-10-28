@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the guanguans/yii-goaop.
+ * This file is part of the guanguans/di.
  *
  * (c) guanguans <ityaozm@gmail.com>
  *
