@@ -2,6 +2,8 @@
 
 All notable changes to `guanguans/di` will be documented in this file
 
-## 1.0.0 - 202X-XX-XX
+## v1.0.0 - 2020-10-28
 
-- initial release
+* Added service provider interface (20 minutes ago) <guanguans>
+* Implemented PSR-11 container interface
+* Modified from `illuminate/container:5.4`
