@@ -17,8 +17,8 @@ $ composer require guanguans/di -vvv
 ## Usage
 
 ``` php
-$skeleton = new Guanguans\Di();
-echo $skeleton->echoPhrase('Hello, Guanguans!');
+<?php
+$skeleton = new Guanguans\Di\Di();
 ```
 
 ## Testing
@@ -41,9 +41,9 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 ## Credits
 
-- [guanguans](https://github.com/guanguans)
-- [All Contributors](../../contributors)
+* [guanguans](https://github.com/guanguans)
+* [All Contributors](../../contributors)
 
 ## License
 
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+The MIT License (MIT). Please see [License File](LICENSE) for more information.
