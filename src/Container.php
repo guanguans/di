@@ -13,6 +13,7 @@ namespace Guanguans\Di;
 use ArrayAccess;
 use Closure;
 use LogicException;
+use Psr\Container\ContainerInterface;
 use ReflectionClass;
 use ReflectionParameter;
 
@@ -21,7 +22,7 @@ use ReflectionParameter;
  *
  * @see https://github.com/illuminate/container
  */
-class Container implements ArrayAccess
+class Container implements ArrayAccess, ContainerInterface
 {
     /**
      * The current globally available container (if any).
@@ -1232,5 +1233,21 @@ class Container implements ArrayAccess
     public function __set($key, $value)
     {
         $this[$key] = $value;
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function has($id)
+    {
+        return $this->offsetExists($id);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function get($id)
+    {
+        return $this[$id];
     }
 }
