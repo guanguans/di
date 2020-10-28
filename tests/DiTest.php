@@ -12,7 +12,7 @@ namespace Guanguans\Di\Tests;
 
 class DiTest extends TestCase
 {
-    public function trueIstrue()
+    public function testTrueIstrue()
     {
         $this->assertTrue(true);
     }
