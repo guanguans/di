@@ -19,6 +19,7 @@ class ContextualBindingBuilder
 {
     /**
      * The underlying container instance.
+     * 基础容器实例。
      *
      * @var \Guanguans\Di\Container
      */
@@ -26,6 +27,7 @@ class ContextualBindingBuilder
 
     /**
      * The concrete instance.
+     * 具体实例。
      *
      * @var string
      */
@@ -33,6 +35,7 @@ class ContextualBindingBuilder
 
     /**
      * The abstract target.
+     * 抽象目标。
      *
      * @var string
      */
@@ -40,6 +43,7 @@ class ContextualBindingBuilder
 
     /**
      * Create a new contextual binding builder.
+     * 创建一个新的上下文绑定构建器。
      *
      * @param  \Guanguans\Di\Container  $container
      * @param  string  $concrete
@@ -53,6 +57,7 @@ class ContextualBindingBuilder
 
     /**
      * Define the abstract target that depends on the context.
+     * 定义依赖于上下文的抽象目标。
      *
      * @param  string  $abstract
      * @return $this
@@ -66,6 +71,7 @@ class ContextualBindingBuilder
 
     /**
      * Define the implementation for the contextual binding.
+     * 定义上下文绑定的实现。
      *
      * @param  \Closure|string  $implementation
      * @return void
