@@ -19,7 +19,8 @@
         <whitelist>
             <directory suffix=".php">src/</directory>
             <exclude>
-                <file>src/AspectYiiKernel.php</file>
+                <file>src/BindingResolutionException.php</file>
+                <file>src/ServiceProviderInterface.php</file>
             </exclude>
         </whitelist>
     </filter>
