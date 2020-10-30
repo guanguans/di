@@ -951,6 +951,51 @@ class ContainerTest extends TestCase
         $container->bind('Guanguans\Di\Tests\IContainerContractStub', 'Guanguans\Di\Tests\ContainerImplementationStub');
         $this->assertInstanceOf(ContainerDependentStub::class, $container->build(ContainerDependentStub::class));
     }
+
+    public function test__get()
+    {
+        $container = new Container;
+        $container['std'] = new stdClass;
+        $this->assertInstanceOf(stdClass::class, $container->std);
+    }
+
+    public function test__set()
+    {
+        $container = new Container;
+        $container->std = new stdClass;
+        $this->assertInstanceOf(stdClass::class, $container->std);
+        $this->assertInstanceOf(stdClass::class, $container['std']);
+    }
+
+    public function testGet()
+    {
+        $container = new Container;
+        $container['std'] = new stdClass;
+        $this->assertInstanceOf(stdClass::class, $container->get('std'));
+    }
+
+    public function testHas()
+    {
+        $container = new Container;
+        $this->assertFalse($container->has('std'));
+    }
+
+    public function testCallClassInvalidArgumentException()
+    {
+        $container = new Container;
+        $this->expectException(\InvalidArgumentException::class);
+        $container->call('Guanguans\Di\Tests\ContainerConcreteStub@index@list');
+    }
+
+    public function testNameBindIf()
+    {
+        $container = new Container;
+        $this->assertFalse($container->bound('std'));
+        $container->bindIf('std', function ($container) {
+            return new stdClass;
+        });
+        $this->assertInstanceOf(stdClass::class, $container->get('std'));
+    }
 }
 
 class ContainerConcreteStub
