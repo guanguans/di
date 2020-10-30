@@ -430,7 +430,7 @@ class ContainerTest extends TestCase
     }
 
     /**
-     * @expectedException \Illuminate\Contracts\Container\BindingResolutionException
+     * @expectedException \Guanguans\Di\BindingResolutionException
      * @expectedExceptionMessage Unresolvable dependency resolving [Parameter #0 [ <required> $first ]] in class Guanguans\Di\Tests\ContainerMixedPrimitiveStub
      */
     public function testInternalClassWithDefaultParameters()
@@ -440,7 +440,7 @@ class ContainerTest extends TestCase
     }
 
     /**
-     * @expectedException \Illuminate\Contracts\Container\BindingResolutionException
+     * @expectedException \Guanguans\Di\BindingResolutionException
      * @expectedExceptionMessage Target [Guanguans\Di\Tests\IContainerContractStub] is not instantiable.
      */
     public function testBindingResolutionExceptionMessage()
@@ -450,7 +450,7 @@ class ContainerTest extends TestCase
     }
 
     /**
-     * @expectedException \Illuminate\Contracts\Container\BindingResolutionException
+     * @expectedException \Guanguans\Di\BindingResolutionException
      * @expectedExceptionMessage Target [Guanguans\Di\Tests\IContainerContractStub] is not instantiable while building [Guanguans\Di\Tests\ContainerTestContextInjectOne].
      */
     public function testBindingResolutionExceptionMessageIncludesBuildStack()
