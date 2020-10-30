@@ -25,36 +25,28 @@ $ composer require guanguans/di -vvv
 
 require __DIR__.'/vendor/autoload.php';
 
-class ClassA
-{
-    public $classB;
-
-    public function __construct(ClassB $classB)
-    {
-        $this->classB = $classB;
-    }
-}
-
-class ClassB
-{
-    public $classc;
-
-    public function __construct(ClassC $classc)
-    {
-        $this->classc = $classc;
-    }
-}
-
-class ClassC
-{
-}
+class ConcreteStub{}
 
 $container = new \Guanguans\Di\Container();
-$classA = $container->make(ClassA::class);
-var_dump($container->get(ClassA::class));
-var_dump($classA);
-var_dump($classA->classB);
-var_dump($classA->classB->classc);
+
+// Simple Bindings
+$container->bind(ConcreteStub::class, function ($container) {
+    return new ConcreteStub();
+});
+
+// Binding A Singleton
+$container->singleton('ConcreteStub', function ($container) {
+    return new ConcreteStub();
+});
+
+// Binding Interfaces To Implementations
+$container->bind(
+    'App\Contracts\EventPusher',
+    'App\Services\RedisEventPusher'
+);
+
+// Resolving
+$concreteStub = $container->make(ConcreteStub::class);
 ```
 
 ## Testing
