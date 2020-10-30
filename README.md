@@ -4,6 +4,7 @@
 
 ![Tests](https://github.com/guanguans/di/workflows/Tests/badge.svg)
 ![Check & fix styling](https://github.com/guanguans/di/workflows/Check%20&%20fix%20styling/badge.svg)
+[![codecov](https://codecov.io/gh/guanguans/di/branch/main/graph/badge.svg)](https://codecov.io/gh/guanguans/di)
 [![Latest Stable Version](https://poser.pugx.org/guanguans/di/v)](//packagist.org/packages/guanguans/di)
 [![Total Downloads](https://poser.pugx.org/guanguans/di/downloads)](//packagist.org/packages/guanguans/di)
 [![License](https://poser.pugx.org/guanguans/di/license)](//packagist.org/packages/guanguans/di)
