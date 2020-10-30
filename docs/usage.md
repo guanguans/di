@@ -24,8 +24,8 @@ $container = app();
 
 **注意：**  [官方文档](https://laravel.com/docs/5.4/container)中使用的是  `$this->app`  而不是 `$container`。
 
-(* 在 Laravel 应用中，[Application](https://github.com/laravel/framework/blob/5.4/src/Illuminate/Foundation/Application.php) 实际上是 Container 的一个子类
-( 这也说明了辅助函数 `app()` 的由来 )，不过在这篇文章中我还是将重点讲解 [Container](https://github.com/laravel/framework/blob/5.4/src/Illuminate/Container/Container.php) 类的方法。)
+在 Laravel 应用中，[Application](https://github.com/laravel/framework/blob/5.4/src/Illuminate/Foundation/Application.php) 实际上是 Container 的一个子类
+(这也说明了辅助函数 `app()` 的由来)，不过在这篇文章中我还是将重点讲解 [Container](https://github.com/laravel/framework/blob/5.4/src/Illuminate/Container/Container.php) 类的方法。
 
 ### 在 Laravel 之外使用 Illuminate\Container
 
