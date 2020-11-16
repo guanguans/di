@@ -22,7 +22,7 @@ interface ServiceProviderInterface
      * 在给定的容器上注册服务。此方法仅应用于配置服务和参数。它不应获得服务。
      *
      * @param  \Guanguans\Di\Container  $container A container instance
-     * @return mixed
+     * @return mixed|void
      */
     public function register(Container $container);
 }
